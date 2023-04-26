@@ -15,12 +15,7 @@ const routes = [
     path: "/comments",
     key: 3,
   },
-  {
-    name: "Albums",
-    style: "p-3 hover:bg-green-100 rounded-lg",
-    path: "/albums",
-    key: 4,
-  },
+
   {
     name: "Photos",
     style: "p-3 hover:bg-green-100 rounded-lg",

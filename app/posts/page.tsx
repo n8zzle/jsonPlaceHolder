@@ -8,7 +8,7 @@ async function getPosts() {
 
 const Posts = async () => {
   const data = await getPosts();
-  console.log(data);
+  //console.log(data);
   return (
     <div className="h-full ">
       <h1 className="text-4xl font-extrabold text-center p-10 ">
