@@ -25,11 +25,11 @@ const Comments = async (props: Props) => {
           duration: 0.3,
           x: { duration: 1 },
         }}
-        className="text-4xl font-extrabold text-center p-10 "
+        className="text-2xl md:text-4xl font-extrabold text-center p-10 "
       >
         Comments form API
       </motion.h1>
-      <div className="grid grid-cols-3 gap-4 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
         {data.map((d) => (
           <motion.div
             initial={{ y: 50, opacity: 0 }}

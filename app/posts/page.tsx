@@ -13,7 +13,7 @@ const Posts = async () => {
   const data = await getPosts();
   //console.log(data);
   return (
-    <div className=" bg-white">
+    <div className=" bg-white ">
       <motion.h1
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -22,7 +22,7 @@ const Posts = async () => {
           duration: 0.3,
           x: { duration: 1 },
         }}
-        className="text-4xl font-extrabold text-center p-10 "
+        className="text-2xl md:text-4xl font-extrabold text-center  p-10"
       >
         Posts form API
       </motion.h1>
@@ -30,7 +30,7 @@ const Posts = async () => {
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="grid grid-cols-4 gap-4 max-w-7xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto "
       >
         {data.map((d) => (
           <div

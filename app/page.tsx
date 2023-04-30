@@ -14,7 +14,7 @@ export default function Home() {
           stiffness: 260,
           damping: 20,
         }}
-        className="text-6xl font-extrabold text-center"
+        className="text-3xl md:text-6xl font-extrabold text-center"
       >
         Data from <br />
         <span className="text-white">jsonplaceholder.com</span>

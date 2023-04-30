@@ -15,7 +15,7 @@ const Users = async (props: Props) => {
   const data = await getUsers();
   console.log(data);
   return (
-    <div className="bg-white h-full">
+    <div className="bg-white ">
       <motion.h1
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -28,7 +28,7 @@ const Users = async (props: Props) => {
       >
         Users from API
       </motion.h1>
-      <div className="max-w-7xl mx-auto  grid grid-cols-2 gap-4">
+      <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 gap-4">
         {data.map((d) => (
           <motion.div
             initial={{ y: 50, opacity: 0 }}
