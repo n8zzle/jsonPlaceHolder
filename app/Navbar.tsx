@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import path from "path";
+import { motion } from "framer-motion";
 import React from "react";
 
 const routes = [
@@ -65,7 +67,11 @@ const Navbar = (props: Props) => {
         </Link>
       </div>
     </nav> */
-    <nav className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  p-10">
+    <motion.nav
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  p-10"
+    >
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <Link href="./">
           <h2 className="text-lg font-bold">Working with API</h2>
@@ -73,12 +79,21 @@ const Navbar = (props: Props) => {
         <div className="space-x-3">
           {routes.map((r) => (
             <Link href={r.path} key={r.key}>
-              <button className={r.style}>{r.name}</button>
+              <motion.button
+                transition={{
+                  ease: "linear",
+                  duration: 2,
+                  x: { duration: 1 },
+                }}
+                className={r.style}
+              >
+                {r.name}
+              </motion.button>
             </Link>
           ))}
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

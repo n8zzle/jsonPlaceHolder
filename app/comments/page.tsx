@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { Avatar } from "@mui/material";
 import React from "react";
 
 type Props = {};
@@ -13,20 +16,34 @@ const Comments = async (props: Props) => {
   //console.log(data);
   return (
     //TODO: MUI Avatar
-    <div className=" w-full ">
-      <h1 className="text-4xl font-extrabold text-center p-10 ">
+    <div className=" bg-white ">
+      <motion.h1
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          ease: "linear",
+          duration: 0.3,
+          x: { duration: 1 },
+        }}
+        className="text-4xl font-extrabold text-center p-10 "
+      >
         Comments form API
-      </h1>
+      </motion.h1>
       <div className="grid grid-cols-3 gap-4 max-w-7xl mx-auto">
         {data.map((d) => (
-          <div
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             key={d.id}
-            className="w-full p-10 rounded-lg border-2 border-solid  hover:border-indigo-600"
+            className="w-full p-10 space-y-5 rounded-lg border-2 border-solid  hover:border-indigo-600"
           >
-            <h1 className="text-lg font-extrabold">{d.email}</h1>
-            <hr className="p-2"></hr>
+            <div className="flex flex-row items-center space-x-3">
+              <Avatar>{d.email[0]}</Avatar>
+              <h1 className="text-lg font-extrabold">{d.email}</h1>
+            </div>
+
             <p className="text-sm text-gray-500 hover:text-black">{d.body}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

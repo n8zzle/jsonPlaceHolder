@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen w-screen flex flex-col">
+      <body className="h-screen w-screen flex flex-col bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         <Navbar />
         {children}
       </body>
